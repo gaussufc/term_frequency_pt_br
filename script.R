@@ -7,7 +7,7 @@ dir.create("custom_fonts")
 download_google_font <- function(font_family_name) {
   base_url <- "https://fonts.google.com/download?family={font_family_name}"
   
-  download.file(glue(base_url), destfile = glue("custom_fonts/{font_family_name}.zip"))
+  download.file(glue(base_url), destfile = glue("custom_fonts/{font_family_name}.zip"), mode = "wb")
   
   unzip(glue("custom_fonts/{font_family_name}.zip"),
         exdir = glue("custom_fonts/{font_family_name}"))
